@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <color name="base_color">#c63639</color>
+    <color name="base_second_color">#FFFFFF</color>
+    <color name="base_txt_btn_color">#ffffff</color>
+    <color name="clear_color">#00000000</color>
+    <color name="black_color">#000000</color>
+    <color name="clearbtn_color">#3B7AFF</color>
+    <color name="btn_color">#C63639</color>
+    <color name="btn1_color">#C63639</color>
+    <color name="btn2_color">#C63639</color>
+    <color name="btn_disable">#b3b3b3</color>
+    <color name="alpha_color">#77c63639</color>
+    <color name="bull_color">#ed3833</color>
+
+    <color name="gray_bar">#575857</color>
+    <color name="gray">#d3d3d3</color>
+    <color name="btn_orange">#f49a04</color>
+    <color name="btn_green">#3bb807</color>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Mis Datos"
+    android:id="@+id/mydatanav">
+</item>
+    <item android:title="Ayuda"
+        android:id="@+id/ayudanav">
+    </item>
+    <item android:title="Cerrar Sesión"
+        android:id="@+id/logout">
+    </item>
+
+</menu>
