@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -48,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         user = (EditText) findViewById(R.id.txtlogin_user);
         password = (EditText) findViewById(R.id.txtlogin_pass);
+
         btnlogin = (Button) findViewById(R.id.btnlogin);
 
 
