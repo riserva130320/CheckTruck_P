@@ -137,34 +137,48 @@ public class LoginActivity extends AppCompatActivity {
 
                     });*/
             if (success) {
+
+
+
                 try {
-                    ArrayList  ArrayData = new ArrayList<String>();
-                    JSONArray resultData=    new JSONArray(data);
-                    HashMap<String, String> applicationSettings = new HashMap<String,String>();
-                    String name = resultData.get(1).toString();
-                    String pass =resultData.get(3).toString();
+                    final JSONObject jobj = new JSONObject(data);
 
-                    String passw = ((EditText) findViewById(R.id.txtlogin_pass)).getText().toString();
-                 String   pass1 = passw.trim().replace(" ","");
-
-      if (pass.contentEquals(pass1)){
-          UserLoged();
-      } else {
-
-      }
-
+                    if (jobj.getString("err_login").isEmpty()) {
+                        SharedPreferences.Editor editor = spref.edit();
+                        //Se registran los datos de login
+                        editor.putInt("samaya_usrid", Integer.parseInt(jobj.getString("id_user")));
+                        editor.putString("samaya_logid", String.valueOf(jobj.getInt("id_logdet")));
+                        editor.putString("samaya_nombre", jobj.getString("dsc_nombres"));
+                        Log.i("ver",">>>>>>Login: "+String.valueOf(jobj.getInt("id_logdet")));
+                        editor.putInt("samaya_offid", Integer.parseInt(jobj.getString("id_perfilcat")));
+                        editor.putString("samaya_Name", "Samaya");
+                       // editor.putString("samaya_usrName", ((EditText) findViewById(R.id.login_lay_emailET)).getText().toString());
+                        editor.commit();
 
 
 
+/*
+                        DBManager dbMng = new DBManager(LoginActivity.this.getBaseContext());
+                        dbMng.open();
+                        dbMng.addProfileInfo(jobj.getJSONArray("profiles"), jobj.getString("id_user"));
+                        dbMng.close();*/
 
+                        UserLoged();
+                    } else {
+                        MessageManager.showStaticMessage(LoginActivity.this, "Error", jobj.getString("err_login"));
+
+                    }
 
                     //Comprobar la conexión a internet
-
-                } catch (Exception e) {
+                    ConnectionDetector connect = new ConnectionDetector(AppDelegate.actActivity);
+                    if(connect.isConnectingToInternet()){
+                        //AppDelegate.showStaticMessage(LoginActivity.this, "Aviso", AppDelegate.Err05);
+                    }
+                }catch (Exception e) {
                     MessageManager.showStaticMessage(LoginActivity.this, "Aviso", MessageManager.Err04);
                 }
-            } else {MessageManager.showStaticMessage(LoginActivity.this, "Error", MessageManager.Err04);
-            }
+            }else {MessageManager.showStaticMessage(LoginActivity.this, "Error", MessageManager.Err04);
+        }
         }
     }
 
