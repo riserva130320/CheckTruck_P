@@ -153,6 +153,8 @@ public class LoginActivity extends AppCompatActivity {
                         editor.putInt("samaya_offid", Integer.parseInt(jobj.getString("id_perfilcat")));
                         editor.putString("samaya_Name", "Samaya");
                        // editor.putString("samaya_usrName", ((EditText) findViewById(R.id.login_lay_emailET)).getText().toString());
+
+
                         editor.commit();
 
 
