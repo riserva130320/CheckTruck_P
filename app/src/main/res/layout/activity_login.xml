@@ -54,13 +54,4 @@
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/login_view_settingsLay"
-        android:layout_width="300dp"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="-300dp"
-        android:background="@color/clear_color">
-
-    </RelativeLayout>
-
 </RelativeLayout>
