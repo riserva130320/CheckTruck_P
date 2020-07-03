@@ -26,6 +26,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.checktruck.database.DBManager;
 import com.checktruck.tools.MessageManager;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.RequestParams;
@@ -102,7 +103,7 @@ public class LoginActivity extends AppCompatActivity {
 
             RequestParams loginValues = new RequestParams();
             loginValues.put("corpId",AppDelegate.CorpId);
-            loginValues.put("userName",pass);
+            loginValues.put("userName",id);
             loginValues.put("password",pass);
 
 
@@ -138,44 +139,41 @@ public class LoginActivity extends AppCompatActivity {
                     });*/
             if (success) {
 
-
-
                 try {
                     final JSONObject jobj = new JSONObject(data);
 
-                    if (jobj.getString("err_login").isEmpty()) {
+                    if (jobj.getString("Error").isEmpty()) {
                         SharedPreferences.Editor editor = spref.edit();
+                        jobj.getJSONObject("Response").get("id").toString();
+
                         //Se registran los datos de login
-                        editor.putInt("samaya_usrid", Integer.parseInt(jobj.getString("id_user")));
-                        editor.putString("samaya_logid", String.valueOf(jobj.getInt("id_logdet")));
-                        editor.putString("samaya_nombre", jobj.getString("dsc_nombres"));
-                        Log.i("ver",">>>>>>Login: "+String.valueOf(jobj.getInt("id_logdet")));
-                        editor.putInt("samaya_offid", Integer.parseInt(jobj.getString("id_perfilcat")));
-                        editor.putString("samaya_Name", "Samaya");
-                       // editor.putString("samaya_usrName", ((EditText) findViewById(R.id.login_lay_emailET)).getText().toString());
+                        editor.putInt("checktruck_usrid", Integer.parseInt(  jobj.getJSONObject("Response").get("id").toString()));
 
+                        editor.putString("checktruck_nombre",  jobj.getJSONObject("Response").get("name").toString());
 
+                        Log.i("ver",">>>>>>Login: "+String.valueOf(  jobj.getJSONObject("Response").get("id").toString()));
+                        editor.putInt("samaya_offid", Integer.parseInt(          jobj.getJSONObject("Response").get("id").toString()));
+                        editor.putString("checktruck_Name", "CheckTruck");
+                        editor.putString("samaya_usrName", ((EditText) findViewById(R.id.txtlogin_user)).getText().toString());
                         editor.commit();
 
 
-
-/*
                         DBManager dbMng = new DBManager(LoginActivity.this.getBaseContext());
                         dbMng.open();
-                        dbMng.addProfileInfo(jobj.getJSONArray("profiles"), jobj.getString("id_user"));
-                        dbMng.close();*/
+                        dbMng.addProfileInfo(jobj.getJSONArray("profiles"), jobj.getString("id"));
+                        dbMng.close();
 
                         UserLoged();
                     } else {
-                        MessageManager.showStaticMessage(LoginActivity.this, "Error", jobj.getString("err_login"));
+                        MessageManager.showStaticMessage(LoginActivity.this, "Error", jobj.getString("Error"));
 
                     }
 
                     //Comprobar la conexión a internet
-                    ConnectionDetector connect = new ConnectionDetector(AppDelegate.actActivity);
+                  /*  ConnectionDetector connect = new ConnectionDetector(AppDelegate.actActivity);
                     if(connect.isConnectingToInternet()){
-                        //AppDelegate.showStaticMessage(LoginActivity.this, "Aviso", AppDelegate.Err05);
-                    }
+                       // AppDelegate.showStaticMessage(LoginActivity.this, "Aviso", AppDelegate.Err05);
+                    }*/
                 }catch (Exception e) {
                     MessageManager.showStaticMessage(LoginActivity.this, "Aviso", MessageManager.Err04);
                 }
