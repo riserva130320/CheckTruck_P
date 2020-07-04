@@ -213,9 +213,7 @@ public class LoginActivity extends AppCompatActivity {
         RequestQueue requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }*/
-
-
-  public void   UserLoged(){
+  public void UserLoged(){
       Intent next = new Intent(LoginActivity.this,   FormActivity.class);
       startActivity(next);
   }

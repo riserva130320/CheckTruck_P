@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.checktruck.AppDelegate;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -19,7 +21,7 @@ import java.util.ArrayList;
 
 public class DBManager extends SQLiteOpenHelper {
 
-    private static String _DBPath = "/data/data/com.checkTruck/databases/";
+    private static String _DBPath = AppDelegate.DBPath;
     private static String _DBName = "colaboramx.sqlite";
     private SQLiteDatabase _DBPtr;
     private final Context _DBCtxt;
@@ -85,6 +87,7 @@ public class DBManager extends SQLiteOpenHelper {
             String dbPath = _DBPath + _DBName;
             dbPtr = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);
         } catch (SQLiteException e) {
+            Log.i("--->>>","Error: "+e.getMessage());
         }
 
         if (dbPtr != null)
