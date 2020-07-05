@@ -90,15 +90,17 @@ public class SplashActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        SharedPreferences spref = getSharedPreferences("Samaya", Context.MODE_PRIVATE);
-                        String logAux = spref.getString("samaya_logid", "logout");
+                        SharedPreferences spref = getSharedPreferences("WeHoopSystems", Context.MODE_PRIVATE);
+                        String logAux = spref.getString("userNombre", "logout");
+                        int logAuxId = spref.getInt("usrid", 0);
 
-                        if(logAux.equals("logout")) {
+
+                        if(logAux.equals("logout") || logAuxId == 0) {
                             Intent init = new Intent(SplashActivity.this, LoginActivity.class);
                             init.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(init);
                         } else {
-                            Intent log = new Intent(SplashActivity.this, LoginActivity.class);
+                            Intent log = new Intent(SplashActivity.this, FormActivity.class);
                             log.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(log);
                         }

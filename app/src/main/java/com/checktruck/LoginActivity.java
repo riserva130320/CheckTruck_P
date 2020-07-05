@@ -28,6 +28,7 @@ import org.json.JSONObject;
 
 import com.checktruck.database.DBManager;
 import com.checktruck.tools.MessageManager;
+import com.checktruck.tools.connection.Connection;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
@@ -54,7 +55,6 @@ public class LoginActivity extends AppCompatActivity {
 
         btnlogin = (Button) findViewById(R.id.btnlogin);
 
-
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,8 +66,26 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void loginClicked() {
-        executeLogin();
+        if (user.getText().toString().trim().isEmpty() || password.getText().toString().trim().isEmpty()){
+            MessageManager.showStaticMessage(this,
+                    "Error", "Todos los campos son obligatorios");
+            return;
+        }else {
+            Connection.loginUser loginUser = new Connection.loginUser();
+            loginUser.setloginUserListener(new Connection.loginUser.loginUserListener() {
+                @Override
+                public void loginUserSuccess() {
+                    UserLoged();
+                }
 
+                @Override
+                public void loginUserFail(String type, String error) {
+                    MessageManager.showStaticMessage(LoginActivity.this, "Error", error);
+
+                }
+            });loginUser.startLogin(user.getText().toString(), password.getText().toString());
+        }
+        //executeLogin();
     }
 
     public void executeLogin() {
