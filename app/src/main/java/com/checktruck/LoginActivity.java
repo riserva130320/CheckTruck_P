@@ -160,7 +160,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         DBManager dbMng = new DBManager(LoginActivity.this.getBaseContext());
                         dbMng.open();
-                        dbMng.addProfileInfo(jobj.getJSONArray("profiles"), jobj.getString("id"));
+                        //dbMng.addProfileInfo(jobj.getJSONArray("profiles"), jobj.getString("id"));
                         dbMng.close();
 
                         UserLoged();
