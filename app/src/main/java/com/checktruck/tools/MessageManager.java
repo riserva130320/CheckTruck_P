@@ -67,7 +67,7 @@ public class MessageManager {
 
     public static String Err31 = "Para usar esta herramienta debes acceder con tú cuenta. ";
     public static String Err32 = "La presentacion no se puede compartir,es necesario actualizarla, en cuanto este disponible su actualizacion se mostrara nuevamente ";
-
+    public static String Err33 ="Ocurrió un error al conectar. verifique su conexión a internet y vuelva a intentar.";
 
     public static  String LogLab1 = "​Gracias por usar el App Samaya. Para ingresar a ver los contenidos " +
             "presiona en el botón que dice VER PRESENTACIONES. Ahí selecciona el Servicio que " +

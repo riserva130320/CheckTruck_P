@@ -38,12 +38,9 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 public class AppDelegate {
-
-
-
-
     public static String WebPath = "http://www.wehoopsystems.com/hoop.com.wehoopsystems.com/checkTruck/public/services/ws/";
-
+    public static String DataPath = "/data/data/com.checktruck/data";
+    public static String DBPath = "/data/data/com.checktruck/databases/";
     public static String VersionApp = "2.1[23]";
 
 

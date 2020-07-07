@@ -24,7 +24,7 @@
 
         <EditText
             android:id="@+id/txtlogin_user"
-            android:layout_width="110dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
@@ -34,10 +34,11 @@
 
         <EditText
             android:id="@+id/txtlogin_pass"
-            android:layout_width="110dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
 
             android:layout_gravity="center"
+            android:layout_marginTop="5dp"
             android:hint="Contrasena"
             android:inputType="textPassword"
             android:textAlignment="center" />
