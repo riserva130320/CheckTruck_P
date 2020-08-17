@@ -30,7 +30,9 @@
             android:ems="10"
             android:enabled="false"
             android:inputType="textPersonName"
-            android:text="dasdh hdsjahdkja hkjasdh akjhsd dhksajdh" />
+            android:text="05/05/2020 13:31:12"
+            android:textAlignment="center"
+            android:textIsSelectable="false" />
 
     </RelativeLayout>
 
@@ -122,6 +124,100 @@
                     android:text="Salida"
                     android:textSize="18sp" />
             </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del Operador"
+                    android:textColor="@color/blackColor"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView6"
+                    android:layout_marginTop="5dp"
+                    android:spinnerMode="dropdown" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="# de Caja del Tractor"
+                    android:textColor="@color/blackColor"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView7"
+                    android:layout_marginTop="5dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DOLY"
+                    android:textColor="@color/blackColor"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView8"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="50dp"
+                        android:background="#ffffff"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:gravity="center_vertical|end"
+                        android:text="SI"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/blackColor"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButonn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:background="#ffffff"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:text="NO"
+                        android:textColor="@color/blackColor"
+                        android:textSize="18sp" />
+                </RadioGroup>
+            </RelativeLayout>
 
         </LinearLayout>
 
