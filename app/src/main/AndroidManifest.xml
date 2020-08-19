@@ -25,7 +25,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".FormOneActivity"></activity>
+        <activity android:name=".forms.FormTwoActivity"></activity>
+        <activity android:name=".forms.FormOneActivity" />
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"

@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import java.net.URL;
+import com.checktruck.forms.FormOneActivity;
 
 public class FormActivity extends AppCompatActivity {
 
