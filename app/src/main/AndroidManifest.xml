@@ -39,6 +39,7 @@
         </activity>
         <activity android:name=".FormActivity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".forms.FormThreeActivity" />
     </application>
 
 </manifest>

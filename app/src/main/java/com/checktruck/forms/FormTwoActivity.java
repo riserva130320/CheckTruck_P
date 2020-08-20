@@ -12,7 +12,7 @@ public class FormTwoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_two);
 
-        findViewById(R.id.button5).setOnClickListener(v -> {
+        findViewById(R.id.back_btn).setOnClickListener(v -> {
             finish();
         });
     }
