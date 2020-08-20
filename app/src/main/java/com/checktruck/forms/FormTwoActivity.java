@@ -1,5 +1,6 @@
 package com.checktruck.forms;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -12,8 +13,12 @@ public class FormTwoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_two);
 
-        findViewById(R.id.back_btn).setOnClickListener(v -> {
+        findViewById(R.id.form_two_back_btn).setOnClickListener(v -> {
             finish();
+        });
+
+        findViewById(R.id.form_two_next_btn).setOnClickListener(v -> {
+            startActivity(new Intent(this, FormThreeActivity.class));
         });
     }
 }

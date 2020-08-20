@@ -574,7 +574,7 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/form_two_back_btn"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
 
@@ -587,7 +587,7 @@
                     android:text="ATRAS" />
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/form_two_next_btn"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"

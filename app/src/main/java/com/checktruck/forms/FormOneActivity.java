@@ -13,7 +13,7 @@ public class FormOneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_one);
 
-        findViewById(R.id.button2).setOnClickListener(v -> {
+        findViewById(R.id.form_one_next_btn).setOnClickListener(v -> {
             startActivity(new Intent(this, FormTwoActivity.class));
         });
     }
