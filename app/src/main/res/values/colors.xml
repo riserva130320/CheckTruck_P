@@ -6,5 +6,7 @@
 
     <color name="blackColor">#000000</color>
     <color name="clearColor">#00000000</color>
+    <color name="textBtnColor">#FFFFFF</color>
+    <color name="backgraundBtnColor">#FF149FEB</color>
 
 </resources>
