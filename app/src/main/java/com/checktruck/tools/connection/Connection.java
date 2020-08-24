@@ -2,13 +2,9 @@ package com.checktruck.tools.connection;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.widget.EditText;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.checktruck.AppDelegate;
-import com.checktruck.LoginActivity;
-import com.checktruck.R;
 import com.checktruck.tools.MessageManager;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.RequestParams;

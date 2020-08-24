@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,18 +12,7 @@ import android.widget.Button;
 
 
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.checktruck.database.DBManager;
@@ -32,9 +21,6 @@ import com.checktruck.tools.connection.Connection;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 import cz.msebera.android.httpclient.Header;
 

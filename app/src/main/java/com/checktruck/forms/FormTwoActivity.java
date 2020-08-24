@@ -1,9 +1,8 @@
 package com.checktruck.forms;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.SeekBar;
 
 import com.checktruck.R;
@@ -23,7 +22,6 @@ public class FormTwoActivity extends AppCompatActivity {
             startActivity(new Intent(this, FormThreeActivity.class));
         });
 
-        SeekBar dcd = (SeekBar)findViewById(R.id.seekBar2);
-        dcd.setProgress(100);
+
     }
 }

@@ -2,10 +2,9 @@ package com.checktruck.forms;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
-import com.checktruck.AppDelegate;
 import com.checktruck.R;
 
 public class FormThreeActivity extends AppCompatActivity {

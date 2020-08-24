@@ -1,9 +1,8 @@
 package com.checktruck.forms;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.checktruck.R;
 
@@ -14,6 +13,9 @@ public class FormTractorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.avtivity_form_tractor);
 
+        findViewById(R.id.form_tractot_back_btn).setOnClickListener(v -> {
+            finish();
+        });
 
     }
 }
