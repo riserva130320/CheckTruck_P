@@ -88,6 +88,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/form_two_sealViolLy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -111,7 +112,7 @@
                     android:layout_marginTop="5dp">
 
                     <RadioGroup
-                        android:id="@+id/rdg"
+                        android:id="@+id/form_sealViolRg"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_alignParentStart="true"
@@ -120,7 +121,7 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                            android:id="@+id/rawedioButton"
+                            android:id="@+id/form_si_sealViolRbtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
@@ -134,7 +135,7 @@
                             android:textSize="18sp" />
 
                         <RadioButton
-                            android:id="@+id/radioBuetton"
+                            android:id="@+id/form_no_sealViolRbtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
@@ -148,14 +149,15 @@
                     </RadioGroup>
 
                     <ImageButton
-                        android:id="@+id/imageButtoenw2"
+                        android:id="@+id/form_sealViolImg"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_toRightOf="@+id/rdg"
                         android:layout_gravity="end"
+                        android:layout_toRightOf="@+id/form_sealViolRg"
                         android:layout_weight="1"
                         android:background="@color/clearColor"
-                        android:src="@android:drawable/ic_menu_camera" />
+                        android:src="@android:drawable/ic_menu_camera"
+                        android:visibility="invisible" />
                 </RelativeLayout>
 
             </LinearLayout>
