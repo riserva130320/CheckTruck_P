@@ -96,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
                     });*/
 
 
-           String  id = ((EditText) findViewById(R.id.txtlogin_user)).getText().toString();
+            String  id = ((EditText) findViewById(R.id.txtlogin_user)).getText().toString();
 
             if (id.isEmpty())
                 id = ((EditText) findViewById(R.id.txtlogin_user)).getHint().toString();
@@ -140,6 +140,7 @@ public class LoginActivity extends AppCompatActivity {
                         public void run() {
                             findViewById(R.id.login_view_proccessLay).setVisibility(View.INVISIBLE);
 
+
                     });*/
             if (success) {
 
@@ -182,43 +183,39 @@ public class LoginActivity extends AppCompatActivity {
                     MessageManager.showStaticMessage(LoginActivity.this, "Aviso", MessageManager.Err04);
                 }
             }else {MessageManager.showStaticMessage(LoginActivity.this, "Error", MessageManager.Err04);
-        }
+            }
         }
     }
 
-  /*  private  void sendData(String URL){
-        StringRequest stringRequest= new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                if (!response.isEmpty()) {
-                    Intent intent= new Intent(getApplicationContext(),FormActivity.class);
-                    startActivity(intent);
-                }else{
-                    Toast.makeText(LoginActivity.this,"Usuario o Contraseña Incorrecto",Toast.LENGTH_SHORT).show();                }
-
-
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(LoginActivity.this, error.toString(),Toast.LENGTH_SHORT).show();
-
-            }
-        }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-               Map<String, String> parameters= new HashMap<String, String>();
-               parameters.put("id",user.getText().toString());
-               parameters.put("pass",password.getText().toString());
-
-                return parameters;
-            }
-        };
-        RequestQueue requestQueue= Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
-    }*/
-  public void UserLoged(){
-      Intent next = new Intent(LoginActivity.this,   FormActivity.class);
-      startActivity(next);
-  }
+    /*  private  void sendData(String URL){
+          StringRequest stringRequest= new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
+              @Override
+              public void onResponse(String response) {
+                  if (!response.isEmpty()) {
+                      Intent intent= new Intent(getApplicationContext(),FormActivity.class);
+                      startActivity(intent);
+                  }else{
+                      Toast.makeText(LoginActivity.this,"Usuario o Contraseña Incorrecto",Toast.LENGTH_SHORT).show();                }
+              }
+          }, new Response.ErrorListener() {
+              @Override
+              public void onErrorResponse(VolleyError error) {
+                  Toast.makeText(LoginActivity.this, error.toString(),Toast.LENGTH_SHORT).show();
+              }
+          }){
+              @Override
+              protected Map<String, String> getParams() throws AuthFailureError {
+                 Map<String, String> parameters= new HashMap<String, String>();
+                 parameters.put("id",user.getText().toString());
+                 parameters.put("pass",password.getText().toString());
+                  return parameters;
+              }
+          };
+          RequestQueue requestQueue= Volley.newRequestQueue(this);
+          requestQueue.add(stringRequest);
+      }*/
+    public void UserLoged(){
+        Intent next = new Intent(LoginActivity.this,   FormActivity.class);
+        startActivity(next);
+    }
 }

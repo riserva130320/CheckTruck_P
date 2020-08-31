@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoadmin"
+    android:orientation="vertical"
+    tools:context=".forms.FormAdActivity"
+    tools:targetApi="o">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/calendario" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="33dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/menu_admin" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="36dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="145dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/search_icon" />
+
+            <TextView
+                android:id="@+id/search_calendar_admin"
+                android:layout_width="163dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="170dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/black"
+                android:text="TextView" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
